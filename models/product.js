@@ -30,6 +30,12 @@ const productSchema = new mongoose.Schema(
             type: Number,
             
         },
+
+        sold: {
+            type: Number,
+            default: 0
+            
+        },
         date: {
             type: String,
             
