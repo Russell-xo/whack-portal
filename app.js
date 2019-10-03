@@ -24,7 +24,7 @@ mongoose
         useUnifiedTopology: true
 
     })
-    .then(() => console.log('DB Connected'));
+    .then(() => console.log('WHACK - PORTAL Connected'));
 
 
 //middlewares
@@ -41,7 +41,7 @@ app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
 
-const port = process.env.PORT || 8124
+const port = process.env.PORT || 8000
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
