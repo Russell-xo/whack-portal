@@ -49,7 +49,7 @@ exports.create = (req, res) => {
             //console.log('FILES PHOTO: ', files.photo)
             if(files.photo.size > 10000000) {
                 return res.status(400).json({
-                    error: "Image should be less than 2mb in size"
+                    error: "Image should be less than 10mb in size"
                 })
             }
             product.photo.data = fs.readFileSync(files.photo.path)
@@ -108,9 +108,9 @@ exports.update = (req, res) => {
 
         if(files.photo){
             //console.log('FILES PHOTO: ', files.photo)
-            if(files.photo.size > 2000000) {
+            if(files.photo.size > 10000000) {
                 return res.status(400).json({
-                    error: "Image should be less than 2mb in size"
+                    error: "Image should be less than 10mb in size"
                 })
             }
             product.photo.data = fs.readFileSync(files.photo.path)
