@@ -7,7 +7,7 @@ const {
 } = require('../controllers/auth');
 
 const { 
-    userById 
+    userById, addOrderToUserHistory 
 }
 = require('../controllers/user');
 
@@ -16,7 +16,7 @@ const {
 }
 = require('../controllers/order');
 
-router.post('/order/create/:userId', requireSignin, isAuth, create)
+router.post('/order/create/:userId', requireSignin, isAuth, addOrderToUserHistory, create)
 
 
 
