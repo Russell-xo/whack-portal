@@ -3,7 +3,8 @@ const router = express.Router();
 
 const { 
     requireSignin, 
-    isAuth  
+    isAuth, 
+    isAdmin  
 } = require('../controllers/auth');
 
 const { userById, addOrderToUserHistory }= require('../controllers/user');
