@@ -97,12 +97,12 @@ exports.update = (req, res) => {
         }
 
         // check for all form fields
-        const {name, description, price, category, quantity, shipping, date, time, address, clubname} = fields
-        if(!name || !description ||!price || !category || !quantity || !shipping || !date || !time || !address || !clubname) {
-            return res.status(400).json({
-                error: "All fields are required"
-            })
-        }
+        // const {name, description, price, category, quantity, shipping, date, time, address, clubname} = fields
+        // if(!name || !description ||!price || !category || !quantity || !shipping || !date || !time || !address || !clubname) {
+        //     return res.status(400).json({
+        //         error: "All fields are required"
+        //     })
+        // }
         let product = req.product
         product = _.extend(product, fields)
 
